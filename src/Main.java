@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
             int option = 0;
-            double subtotal, count, premiumCounter, total, percentage;
+            double subtotal, count, premiumCounter, total;
             Scanner input = new Scanner(System.in);
             String menu = """
                 =========================
@@ -30,21 +30,18 @@ void main() {
                 } else if (option ==2){
                     subtotal += 30000;
                     count +=1;
-                } if (option == 3){
+                } else if (option == 3){
                     subtotal += 70000;
                     count +=1;
                     premiumCounter +=1;
                 }
             } while (option!=4);
-    System.out.println("subtotal = " + subtotal);
             if (subtotal > 100000){
                 subtotal -= (subtotal * 0.1);
             }
-    System.out.println("subtotal = " + subtotal);
             total = subtotal  + (subtotal*0.19);
+            //Print the total and counters
     System.out.println("The user has: " + count + " products");
     System.out.println((premiumCounter/count)*100 + " of the total of products in the order are premium");
     System.out.println("Total amount to pay = " + total);
-
-
 }
