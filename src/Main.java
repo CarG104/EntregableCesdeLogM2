@@ -42,6 +42,10 @@ void main() {
             total = subtotal  + (subtotal*0.19);
             //Print the total and counters
     System.out.println("The user has: " + count + " products");
-    System.out.println((premiumCounter/count)*100 + " of the total of products in the order are premium");
+    if (count > 0) {
+        System.out.println((premiumCounter / count) * 100 + " of the total of products in the order are premium");
+    } else {
+        System.out.println("0 of the total of products in the order are premium");
+    }
     System.out.println("Total amount to pay = " + total);
 }
